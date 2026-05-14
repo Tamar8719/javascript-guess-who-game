@@ -1,0 +1,276 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow-x: hidden;
+    display: grid;
+    grid-area: "nav"
+        "content"
+        "footer";
+}
+
+.nav {
+    grid-area: "nav";
+    height: 10vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 5px 80px rgba(255, 174, 0, 0.89);
+    position: fixed;
+    z-index: 1000;
+    border-bottom: rgba(255, 174, 0, 0.74) 2px solid;
+}
+
+/* .n {
+    color: black;
+    background-color: rgba(255, 174, 0);
+} */
+
+/* .logo {
+    margin-left: 2vw;
+}
+
+.logo img {
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50px;
+} */
+
+/* .menu {
+    height: 10vh;
+    margin-right: 2vw;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+/* justify-content: center;
+    gap: 4vw;
+}  */
+
+/* .n {
+    width: 120px;
+    height: 50px;
+    text-decoration: none;
+    font-size: 3vh;
+    color: white;
+    padding: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom: white 2px solid;
+    border-left: white 2px solid;
+    border-right: white 2px solid;
+    box-shadow: 0px 0px 50px deepskyblue;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+} */
+
+/* .n1 {
+    background-color: rgb(216, 142, 216);
+    height: 70px;
+}
+
+.n:hover {
+    animation: 0.3s ease-in-out 0s normal forwards len;
+    /* height: 70px; */
+/* }  */
+
+/* @keyframes len {
+    100% {
+        background-color: rgb(179, 94, 179);
+        height: 70px;
+    }
+} */
+
+.content {
+    grid-area: "content";
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.games {
+    min-height: 80vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+    position: relative;
+    margin-bottom: 10vh;
+}
+
+.game {
+    min-height: 32vh;
+    width: 32vh;
+    background-color: rgba(228, 122, 255, 0.5);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    /* margin-top: 5vh;
+    margin-bottom: 5vh; */
+    box-shadow: 5px 5px 80px rgb(0, 162, 255);
+    border: solid 3px rgba(255, 174, 0, 1);
+    background-size: cover;
+}
+
+.g1 {
+    background-image: url("../pic/Mario.png");
+}
+
+/* .g1:hover{
+    background-image: url("../pic/Mario.png");
+} */
+
+.g2 {
+    background-image: url("../pic/guesswho.png");
+    background-size: 100% 100%;
+}
+
+.g3 {
+    background-image: url("../pic/min.png");
+}
+
+.g4 {
+    background-position: center;
+    background-image: url("../pic/lego.webp");
+}
+
+.g5 {
+    background-position: center;
+    background-image: url("../images/bowling-tenpins2.webp");
+}
+
+.g6 {
+    background-image: url("../images/boulles-de-billard.webp");
+}
+
+/* .g5 {
+    background-position: center;
+    background-image: url("../pic/min.png");
+}
+
+.g6 {
+    background-image: url("../pic/lego.webp");
+} */
+
+footer {
+    grid-area: "footer";
+    min-height: 7vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+}
+
+.back {
+    height: 100vh;
+    background-size: cover;
+    width: 100vw;
+    background-image: url(../pic/windows-g8408a779c_1280.jpg);
+    /* background-image: url(../images/שקופית7.JPG); */
+    position: fixed;
+    z-index: -100;
+}
+
+/* .mario {
+    height: 35vh;
+    width: 40vh;
+    border-radius: 40px;
+    box-shadow: 5px 5px 100px rgb(0, 162, 255);
+}
+
+.xo {
+    min-height: 30vh;
+    width: 30vh;
+    border-radius: 40px;
+    box-shadow: 5px 5px 100px rgb(0, 162, 255);
+} */
+
+#h1 {
+    /* background-color: rgba(226, 110, 43, 0.137); */
+    height: 5vh;
+    width: 100%;
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+    padding: 2vh;
+    font-size: 5vh;
+    /* color: rgb(0, 162, 255); */
+    color: rgb(204, 62, 204);
+}
+
+/* .life {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+} */
+
+/* .timer {
+    height: 80px;
+    width: 80px;
+} */
+
+h2 {
+    height: 4vh;
+    width: 100%;
+    background-color: rgb(185, 133, 185);
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+
+#g2 {
+    position: absolute;
+    width: 600px; /* הרחבת הדיב פי 2 */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
+    position: relative; /* דרוש כדי ש-z-index יעבוד */
+    z-index: 1000;
+}
+
+#ah1, #bh1, #ch1 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px; /* צמצום הרווח הפנימי */
+    margin: 3px 0; /* צמצום הרווח בין האלמנטים */
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#g2:hover #ah1,
+#g2:hover #bh1,
+#g2:hover #ch1 {
+    opacity: 1;
+}
+
+#g2 #ah1,
+#g2 #bh1,
+#g2 #ch1 {
+    opacity: 0;
+}

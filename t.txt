@@ -1,0 +1,121 @@
+const board = document.querySelector("#board")
+const quetionList = document.querySelector(".quetionList")
+const subQuetionList = document.querySelector(".subQuetionList")
+const person2 = [
+    ["people1", "יוסף", "בן", "ג'ינג'י", " יש משקפיים", "כיפה", "אין זקן", "חולצת צווארון", "1.jpg"],
+    ["people2", "יהודה", "בן", "חום", "יש משקפיים", "כובע", "אין זקן", "חולצת צווארון", "2.jpg"],
+    ["people3", "ריקי", "בת", "חום", "יש משקפיים", "סרט", "אין זקן", "נמשים", "3.jpg"],
+    ["people4", "בת שבע", "בת", "ג'ינג'י", "אין משקפיים", "סרט", "אין זקן", "תלתלים", "4.jpg"],
+    ["people5", "רותי", "בת", "חום", "יש משקפיים", "אין", "אין זקן", "חולצת צווארון", "5.jpg"],
+    ["people6", "גבריאל", "בן", "שחור", "יש משקפיים", "כובע", "יש זקן", "חולצת צווארון", "6.jpg"],
+    ["people7", "מטילדה", "בת", "לבן", "יש משקפיים", "כובע", "אין זקן", "פרח על המטפחת", "7.jpg"],
+    ["people8", "שפרה", "בת", "לא ידוע", "יש משקפיים", "מטפחת", "אין זקן", "סינר", "8.jpg"],
+    ["people9", "מנחם", "בן", "בלונדיני", "יש משקפיים", "כיפה", "אין זקן", "חולצת צווארון", "9.jpg"],
+    ["people10", "אלי", "בן", "בלונדיני", "אין משקפיים", "אין", "אין זקן", "מוצץ", "10.jpg"],
+    ["people11", "חנן", "בן", "שחור", "אין משקפיים", "כיפה", "אין זקן", "תלתלים", "11.jpg"],
+    ["people12", "אילה", "בת", "בלונדיני", "אין משקפיים", "אין", "אין זקן", "חולצת צווארון", "12.jpg"],
+    ["people13", "ג'ייקוב", "בן", "חום", "יש משקפיים", "כיפה", "יש זקו", "חולצת צווארון", "13.jpg"],
+    ["people14", "יעקב מנחם", "בן", "אפור", "יש משקפיים", "כובע", "יש זקן", "חולצת צווארון", "14.jpg"],
+    ["people15", "בנימין", "בן", "חום", "אין משקפיים", "כיפה", "אין זקן", "חולצת צווארון", "15.jpg"],
+                ]
+
+for (let i = 0; i < person2.length; i++) {
+    let person = document.createElement("div")
+    board.appendChild(person)
+
+
+    person.setAttribute("id", `people${i + 1}`)
+    person.className = 'person'
+
+    console.log(person2[i][person2[i].length - 1]);
+    person.style.backgroundImage = `url(${person2[i][person2[i].length - 1]})`
+
+}
+const chooseCardIndex = Math.floor(Math.random() * person2.length);//מגריל אינדקס של כרטיס במערך
+console.log();
+const objQuetion = [
+    ["false", "מין", "בן", "בת"],
+    ["false", "צבע שיער", "שחור", "חום", "בלונדיני", "ג'ינג'י", "לבן"],
+    ["false", "משקפיים", " יש משקפיים", "אין משקפיים"],
+    // ["false", "כיסוי ראש", "יש כיסוי ראש", "אין כיסוי ראש"],
+    ["false", "כיסוי ראש", "כיפה", "כובע", "מטפחת", "שטריימל", "סרט"],
+    ["false", "זקן", "יש זקן", "אין זקן"],
+    ["false", "פרטים נוספים",
+        "?האם יש לי חולצת צווארון", "האם יש לי נמשים?", "האם יש לי תלתלים?",
+        "האם יש לי פרח על המטפחת?", "האם יש לי סינר?", "האם יש לי מוצץ?", "האם יש לי שרשרת?",
+        "האם יש לי קישוטים על הקיטל?", "האם יש לי תפילין?", "האם יש לי פונפונים בכובע?"]]
+
+for (let i = 0; i < objQuetion.length; i++) {
+    let buttonsDiv = document.createElement("div")
+    const quetion = document.createElement("button")
+    const quetionDiv = document.createElement("div")
+    quetionDiv.className = "quetionDiv"
+    quetionDiv.appendChild(quetion)
+    quetion.className = 'quetion'
+    quetion.innerText = objQuetion[i][1];
+    quetion.addEventListener("click", () => {
+        console.log(chooseCardIndex, "chooseCardIndex");
+        for (let j = 2; j < objQuetion[i].length; j++) {
+            let subQuetion = document.createElement("button")
+            subQuetion.className = "subQuetion";
+            subQuetion.innerText = objQuetion[i][j];
+            subQuetion.addEventListener("click", () => {
+
+
+                subQuetion.style.backgroundColor = "lightgray"
+                console.log(subQuetion);
+                console.log(subQuetion.textContent);
+                let flag1 = false
+                let flag2 = false
+                for (let x = 0; x < person2[chooseCardIndex].length; x++) {
+                    if (person2[chooseCardIndex][x] === subQuetion.textContent) {
+                        flag1 = true
+
+                        console.log("******* true");
+                    }
+
+
+                }
+                if (flag1 === true) {
+                    for (let i = 0; i < person2.length; i++) {
+                        flag2 = false
+                        for (let j = 0; j < person2[i].length; j++) {
+                            // for (let j = 1; j <= 6; j++) {
+                            if (person2[i][j] === subQuetion.textContent) {
+                                flag2 = true
+                            }
+                        }
+                        if (flag2 == false) {
+                            let pId = person2[i][0]
+                            // console.log(pId, "pId");
+                            let a = document.getElementById(`${pId}`)
+                            // a.style.display = "none";
+                            a.style.visibility = "hidden"
+                            // a.remove()
+                            // }
+                        }
+                    }
+                }
+            })
+
+            if (objQuetion[i][0] === "false") {
+                buttonsDiv.appendChild(subQuetion)
+                if (j == objQuetion[i].length - 1) {
+                    objQuetion[i][0] = "true"
+                }
+            }
+            else {
+                buttonsDiv.childNodes[j]
+                if (j == objQuetion[i].length - 1) {
+                    objQuetion[i][0] = "false"
+                    while (buttonsDiv.childNodes.length > 0) {
+                        buttonsDiv.childNodes[0].remove();
+                    }
+                }
+            }
+        }
+
+        quetionDiv.appendChild(buttonsDiv)
+    })
+    quetionList.appendChild(quetionDiv)
+}

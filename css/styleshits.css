@@ -1,0 +1,150 @@
+#board{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-top: 150px;
+    gap: 10px;
+   
+} 
+main{
+    background-image:url("../images/רקע.jpg");
+    background-size: 100%100%;
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+   
+  
+}
+.quetionList{
+    height: 100%;
+    width: 30%;
+    /* z-index: 1; */
+    margin-left:80px; 
+    overflow-x: hidden;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+}
+.subQuetion{
+    color: #83a6cd;
+    font-size: large;
+    margin: 1%;
+    padding: 3%;
+    width: 300px;
+}
+.quetionDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 60px;
+}
+.quetion{
+    color: white;
+    width: 600px;
+    height: 70px;
+    margin: 2%;
+    height: 7%;
+    border: solid 0.5px black;
+    font-size: 20px;
+    background-color: #83a6cd;
+}
+button.quetion {
+    width: 300px;
+    height: 70px;
+}
+.person{
+    background-size: cover;
+    width:150px;
+    height: 200px;
+    border-radius: 10%;
+}
+.tryCount{
+    position: absolute;
+    height: 100px;
+    width: 500px;
+    font-size: 35px;
+    color: #83a6cd;
+    text-align: left;
+    margin-left: 160px;
+    margin-top: 110px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.guessdiv{
+   margin-left: -30px;
+    width: 200px;
+    height: 80px;
+    background-color: thistle;
+    text-align: center;
+    border:white,solid 4px;
+    padding-top: 5px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.buttonGuess{
+    margin-top: 20px;
+}
+.FinishDiv{
+    margin-top: 150px;
+    margin-left: 140px;
+    position: absolute;
+    width: 1600px;
+    height: 550px;
+    /* width: 100vh;
+    height: 100vw; */
+    background-size: 100% 100%;
+    background-image: url("../images/pic3.jpg");
+}
+.finishbutoon{
+    width: 20px;
+    height: 50px;
+    background-color: black;
+    
+}
+.WinDiv{
+    margin-top: 150px;
+    margin-left: 140px;
+    position: absolute;
+    width: 1600px;
+    height: 550px;
+    background-size: 100% 100%;
+    background-image: url("../images/pic1.jpg");
+}
+.failedDiv{
+margin-top: 150px;
+margin-left: 140px;
+position: absolute;
+width: 1600px;
+height: 550px;
+background-size: 100% 100%;
+background-image: url("../images/pic2.jpg");
+}
+.NewGame{
+background-color:plum;
+width: 100px;
+height: 70px;
+color: black;
+font-size: larger;
+margin-top: 480px;
+margin-left: 1200px;
+}
+.Home{
+background-color:plum;
+width: 100px;
+height: 70px;
+color: black;
+font-size: larger;
+margin-top: 50px;
+margin-left: 50px;
+}
+.victoryPoints{
+    position: absolute;
+    height: 100px;
+    width: 500px;
+    font-size: 35px;
+    color: #83a6cd;
+    text-align: left;
+    margin-left: 180px;
+    margin-top:60px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
