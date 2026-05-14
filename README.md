@@ -63,14 +63,14 @@ javascript-guess-who-game/
 ### Games Menu
 ![Games Menu](screenshots/games-menu.png)
 
+### Game Board
+![Game Board](screenshots/game-board.png)
+
 ### Gameplay Screen 1
 ![Gameplay 1](screenshots/gameplay1.png)
 
 ### Gameplay Screen 2
 ![Gameplay 2](screenshots/gameplay2.png)
-
-### Game Board
-![Game Board](screenshots/game-board.png)
 
 ---
 
